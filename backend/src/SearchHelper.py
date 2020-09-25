@@ -1,6 +1,6 @@
 from pybloom import BloomFilter
 import re
-from nltk.corpus import wordnet
+# from nltk.corpus import wordnet
 from typing import List
 
 class SearchHelper:
@@ -26,13 +26,14 @@ class SearchHelper:
     def semantic_search(self) -> List[str]:
         pass
 
+    # TODO: Decide if were doing this or not
     def _find_synonyms(self, words: List[str]) -> List[str]:
         synonyms = []
-        for word in words:
-            try:
-                synonyms.append(wordnet.synsets(word))
-            except Exception:
-                print(f"Error finding synonyms on word: {word}")
+        # for word in words:
+        #     try:
+        #         synonyms.append(wordnet.synsets(word))
+        #     except Exception:
+        #         print(f"Error finding synonyms on word: {word}")
         
         return synonyms
 
