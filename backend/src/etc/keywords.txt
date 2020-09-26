@@ -1,5 +1,3 @@
-government
-gerrymander
 Absentee
 Accountable
 Activist
@@ -7,29 +5,423 @@ Adverse
 Advertising
 Advice
 Advise
-Affiliation, Aggressive, Amendment, Announcement, Anthem, Appeal, Appearance, Appoint, Approach, Appropriation, Arguments, Articulate, Aspiration, Asset, Assimilation, At large, Audience, Authorization
-Background, Bait, Balanced budget, Ballot, Ballot box, Bandwagon, Barnstorm, Behavior, Beliefs, Biannual, Bias, Bicameral, Bill, Bipartisan, Boondoggle, Brochure, Budget, Bunk, Bureaucracy
-Cabinet, Campaign, Candidate, Canvass, Capitalize, Career, Catalyst, Caucus, Ceiling, Centrist, Challenge, Challenger, Changes, Charismatic, Checks and balances, Choice, Citation, Civic, Coalition, Coast-to-coast, Coattail, Collaboration, Colleague, Collective, Commitments, Committee, Commonality, Communication, Compassion, Concede, Concessions, Confidence, Congress, Congressional, Conscience, Consequence, Conservative, Constituent, Constitution, Consultation, Contribution, Controversy, Convene, Convention, Council, Curiosity, Cycle
-Dark horse, Debate, Decision, Decisive, Declaration, Defeat, Deficit, Delegate, Deliberate, Deliberation, Democracy, Democrat, Democratic, Derision, Destiny, Diligent, Diplomat, Disapproval, Discourse, Discreet, Discussion, Disheartened, Dishonesty, Dissatisfaction, District, Distrust, Diverse, Division, Dogma, Dominate, Donation, Donor, Dossier, Dynamic
-Effective, Efficient, Elation, Electoral college, Elevate, Eloquence, Emphasis, Enact, Endorsement, Engaging, Equal, Ethics, Euphoria, Excessive, Executive, Exit poll, Experience
-Faction, Federal, Feud, Filibuster, Flawed, Focus, Forum, Fraud, Freedom, Front runner, Fundamental, Funding, Fundraiser
-Gambit, Gerrymander, Glaring, GOP, Government, Grass roots, Grateful
-Handshakes, Hard money, Hatch Act, Heckle, Historic, Honesty, Hooray, Hypocrisy
-Immigrants, Impound, Inalienable, Incentive, Incorporate, Incumbency, Incumbent, Independent, Independent, Indulge, Infallible, Influx, Informative, Initiative, Innuendo, Inspiring, Integrity, Interests, Investigate, Involvement, Irresponsible, Issues
-Jeopardy, JUBILANT, Judge, Judicial
-Keen, Knowledge
-Lame duck, Landslide, Law, Leader, Leadership, Leanings, Legal, Legalization, Legislature, Liberal, Listening, Lobbyist, Lone, Loser, Loss, Loyalty
-Magistrate, Majority, Mandate, Meaningful, Measures, Media, Meetings, Mentor, Midterm election, Minority, Misinformation, Motives, Mudslinging
-National, Nationwide, Negativity, Network, Nominate, Nominee, Nonpartisan
-Obligation, Obsequious, Offensive, Office, Official, Old boy, Opine, Opinion, Opinionated, Opportunity, Opposition, Orator(y), Outspoken, Ovation
-PAC (political action committee), Pamphlets, Pardon, Participation, Partisanship, Party, Patriotism, Petition, Platform, Pledge, Plurality, Polarize, Policy, Polite, Politician, Politics, Poll, Polling place, Pollster, Popular, Popularity, Pork barrel, Position paper, Pragmatist, Praise, Precinct, Predictions, Prescient, Press, Pride, Primary, Priority, Proactive, Process, Progressive, Projection, Promises, Propaganda, Proponent, Proposal, Purpose
-Query, Quest, Questions, Quorum, Quotes
-Race, Ratify, Re-election, Reapportionment, Recall, Recognition, Reconciliation, Recount, Recrimination, Redistrict, Referendum, Reform, Registration, Regulate, Representation, Republican, Rescind, Resignation, Resilience, Restrictions, Retort, Reveal, Revelations, Revenues, Rhetoric, Roll call, Runoff
-Scope, Senate, Seniority, Shift, Shortcoming, Shuffle, Sidelines, Sinecure, Skill, Slate, Slogan, Solicitation, Solution, Spar, Spectacle, Speculate, Spending, Spin, Stakes, Stance, State�s rights, Statute, Strategist, Strategy, Straw poll, Stump, Subcommittee, Subjects, Success, Suffrage, Support, System
-Tactics, Tally, Taxpayer, Term, Term limit, Ticket, Topic, Trust, Turnout
-Ultimate, Unanimous, Uncommitted, Unfair, Uniformity, Unity, Unknown, Unopposed, Unprecedented, Unwind, Upcoming, Upset
-Vacancy, Veto, Viable, Victor, Victory, Vie, Viewpoint, Views, Violations, VIP, Volunteers, Voter, Vulnerability
-Ward, Whistle-stop, Wild-card, Win, Winner, Withdraw, Withhold, Woo
+
+Affiliation
+Aggressive
+Amendment
+Announcement
+Anthem
+Appeal
+Appearance
+Appoint
+Approach
+Appropriation
+Arguments
+Articulate
+Aspiration
+Asset
+Assimilation
+At large
+Audience
+Authorization
+
+Background
+Bait
+Balanced budget
+Ballot
+Ballot box
+Bandwagon
+Barnstorm
+Behavior
+Beliefs
+Biannual
+Bias
+Bicameral
+Bill
+Bipartisan
+Boondoggle
+Brochure
+Budget
+Bunk
+Bureaucracy
+
+Cabinet
+Campaign
+Candidate
+Canvass
+Capitalize
+Career
+Catalyst
+Caucus
+Ceiling
+Centrist
+Challenge
+Challenger
+Changes
+Charismatic
+Checks and balances
+Choice
+Citation
+Civic
+Coalition
+Coast-to-coast
+Coattail
+Collaboration
+Colleague
+Collective
+Commitments
+Committee
+Commonality
+Communication
+Compassion
+Concede
+Concessions
+Confidence
+Congress
+Congressional
+Conscience
+Consequence
+Conservative
+Constituent
+Constitution
+Consultation
+Contribution
+Controversy
+Convene
+Convention
+Council
+Curiosity
+Cycle
+
+Dark horse
+Debate
+Decision
+Decisive
+Declaration
+Defeat
+Deficit
+Delegate
+Deliberate
+Deliberation
+Democracy
+Democrat
+Democratic
+Derision
+Destiny
+Diligent
+Diplomat
+Disapproval
+Discourse
+Discreet
+Discussion
+Disheartened
+Dishonesty
+Dissatisfaction
+District
+Distrust
+Diverse
+Division
+Dogma
+Dominate
+Donation
+Donor
+Dossier
+Dynamic
+
+Effective
+Efficient
+Elation
+Electoral college
+Elevate
+Eloquence
+Emphasis
+Enact
+Endorsement
+Engaging
+Equal
+Ethics
+Euphoria
+Excessive
+Executive
+Exit poll
+Experience
+
+Faction
+Federal
+Feud
+Filibuster
+Flawed
+Focus
+Forum
+Fraud
+Freedom
+Front runner
+Fundamental
+Funding
+Fundraiser
+
+Gambit
+Gerrymander
+Glaring
+GOP
+Government
+Grass roots
+Grateful
+
+Handshakes
+Hard money
+Hatch Act
+Heckle
+Historic
+Honesty
+Hooray
+Hypocrisy
+
+Immigrants
+Impound
+Inalienable
+Incentive
+Incorporate
+Incumbency
+Incumbent
+Independent
+Independent
+Indulge
+Infallible
+Influx
+Informative
+Initiative
+Innuendo
+Inspiring
+Integrity
+Interests
+Investigate
+Involvement
+Irresponsible
+Issues
+
+Jeopardy
+JUBILANT
+Judge
+Judicial
+
+Keen
+Knowledge
+
+Lame duck
+Landslide
+Law
+Leader
+Leadership
+Leanings
+Legal
+Legalization
+Legislature
+Liberal
+Listening
+Lobbyist
+Lone
+Loser
+Loss
+Loyalty
+
+Magistrate
+Majority
+Mandate
+Meaningful
+Measures
+Media
+Meetings
+Mentor
+Midterm election
+Minority
+Misinformation
+Motives
+Mudslinging
+
+National
+Nationwide
+Negativity
+Network
+Nominate
+Nominee
+Nonpartisan
+
+Obligation
+Obsequious
+Offensive
+Office
+Official
+Old boy
+Opine
+Opinion
+Opinionated
+Opportunity
+Opposition
+Orator(y)
+Outspoken
+Ovation
+
+PAC (political action committee)
+Pamphlets
+Pardon
+Participation
+Partisanship
+Party
+Patriotism
+Petition
+Platform
+Pledge
+Plurality
+Polarize
+Policy
+Polite
+Politician
+Politics
+Poll
+Polling place
+Pollster
+Popular
+Popularity
+Pork barrel
+Position paper
+Pragmatist
+Praise
+Precinct
+Predictions
+Prescient
+Press
+Pride
+Primary
+Priority
+Proactive
+Process
+Progressive
+Projection
+Promises
+Propaganda
+Proponent
+Proposal
+Purpose
+
+Query
+Quest
+Questions
+Quorum
+Quotes
+
+Race
+Ratify
+Re-election
+Reapportionment
+Recall
+Recognition
+Reconciliation
+Recount
+Recrimination
+Redistrict
+Referendum
+Reform
+Registration
+Regulate
+Representation
+Republican
+Rescind
+Resignation
+Resilience
+Restrictions
+Retort
+Reveal
+Revelations
+Revenues
+Rhetoric
+Roll call
+Runoff
+
+Scope
+Senate
+Seniority
+Shift
+Shortcoming
+Shuffle
+Sidelines
+Sinecure
+Skill
+Slate
+Slogan
+Solicitation
+Solution
+Spar
+Spectacle
+Speculate
+Spending
+Spin
+Stakes
+Stance
+State�s rights
+Statute
+Strategist
+Strategy
+Straw poll
+Stump
+Subcommittee
+Subjects
+Success
+Suffrage
+Support
+System
+
+Tactics
+Tally
+Taxpayer
+Term
+Term limit
+Ticket
+Topic
+Trust
+Turnout
+
+Ultimate
+Unanimous
+Uncommitted
+Unfair
+Uniformity
+Unity
+Unknown
+Unopposed
+Unprecedented
+Unwind
+Upcoming
+Upset
+
+Vacancy
+Veto
+Viable
+Victor
+Victory
+Vie
+Viewpoint
+Views
+Violations
+VIP
+Volunteers
+Voter
+Vulnerability
+
+Ward
+Whistle-stop
+Wild-card
+Win
+Winner
+Withdraw
+Withhold
+Woo
+
 Xenophobic
-Yell, Yield
-Zeal, Zealous, Zone
+
+Yell
+Yield
+
+Zeal
+Zealous
+Zone
