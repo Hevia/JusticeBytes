@@ -55,34 +55,22 @@ class SearchHelper:
         
         # TODO: sanitizing query would improve runtime, but we don't get false negatives right now.
         search_terms = self.spellCheck(search_string)
-        ranked: dict = {}
+        result = []
         
         pickle_in = open("./etc/scraped-wikipedia-output.pickle", "rb")
         search_data_cleaned = pickle.load(pickle_in)
         
         
-        # Adds frequency of the keywords contained both in the article and the search string. 
-        for title, words in search_data_cleaned.items():
-            rank = 0
-            for word, freq in words.items():
-                if word in search_terms:
-                    rank += freq
-            if (rank > 0):
-                ranked[title] = rank
-        print(ranked)
-        
-        # Looks through ranking just made and returns URL w/ highest rank.
-        maxVal = 0
-        bestURL: str = ""
-        for title, ranking in ranked.items():
-            if ranking > maxVal:
-                maxVal = ranking
-                bestURL = title
+        # Adds the url and title as a single element, we return the collection of them as an n x 2 array.
+        for keyword, value in search_data_cleaned.items():
+                if (keyword in search_terms):
+                    for x in range(len(value)):
+                        result.append(value[x])
 
-        print(bestURL)
+        #print(result)
         pickle_in.close()
 
-        return bestURL
+        return result
 
     
 
