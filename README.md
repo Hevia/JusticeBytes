@@ -1,15 +1,22 @@
 # JusticeBytes
 ShellHacks 2020 - A search engine for social justice
 
+Developed with ❤ by:
+* Anthony Hevia - Fullstack/DevOps
+* Komila Kebolo - ML/UX
+* Dylan Ocha - Backend
+* Adam Fernandes - Web Scraping / Backend
+
+
 
 ## Overview
 ![System Diagram](./justiceBytes.png)
 
 ## Tools & Technologies
 * [Postman](https://www.postman.com/) for API testing
-* Python 3+ for backend
-* Node.js + Typescript for frontend
-* Docker for deployments
+* [Python3]() for the backend
+* [Node.js]() & [React]() for the frontend
+* [Docker]() for deployments
 
 
 ## References
@@ -17,3 +24,5 @@ Here is a non-ranked, non-exhaustive list of all the resources we used to bring 
 * https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40
 * https://baseweb.design/
 * https://myvocabulary.com/word-list/politicsvocabulary/
+* https://microsoft.github.io/frontend-bootcamp/
+* https://medium.com/@chathuranga94/managing-global-state-with-reacts-hooks-context-api-9b9f781d8a3f
