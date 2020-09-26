@@ -24,7 +24,10 @@ def isValidLink(link: str):
    return True
 
 # Uses the keywords from the corpus to scrape Wikipedia
+# Returns a dictionary where key is URL and value is a heat map of other words in the dictionary
 def scrapeWikipedia():
+   scrapedInfo: dict = {}
+
    for line in fileObject:
       if line == "\n":
          continue
@@ -32,7 +35,8 @@ def scrapeWikipedia():
       keyword: str = line.strip("\n")
       newUrl: str = WIKI_URL_BASE + keyword
 
-      isValidLink(newUrl)
+      if not isValidLink(newUrl):
+         continue
 
 scrapeWikipedia()
 
