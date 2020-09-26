@@ -3,14 +3,28 @@ from azure.cognitiveservices.language.luis.runtime import LUISRuntimeClient
 from msrest.authentication import CognitiveServicesCredentials
 from functools import reduce
 from typing import List
-import json, time
+from etc.FileHelpers import *
 
 
 class AzureHelper:
     def __init__(self):
-        # TODO: Authenticate with Azure LUIS here
-        pass
+        self.credential_dict = loadJSON("./credentials/azure-keys.json")
+        self.runtimeCredentials = CognitiveServicesCredentials(self.credential_dict["predictionKey"])
+        self.client = LUISRuntimeClient(
+            endpoint=f'https://{self.credential_dict["predictionResourceName"]}.cognitiveservices.azure.com/',
+            credentials=self.runtimeCredentials
+        )
     
     # TODO: Not sure how the final method signature will look like but heres a start
     def searchLUIS(self, search_query: str) -> List[str]:
         return []
+
+    def makePrediction(self, pred_query: str):
+        predictionRequest = {"query": pred_query}
+        predictionResponse = self.client.prediction.get_slot_prediction(
+            self.credential_dict["appId"], 
+            "Development", 
+            predictionRequest)
+        print(predictionResponse)
+
+AzureHelper()

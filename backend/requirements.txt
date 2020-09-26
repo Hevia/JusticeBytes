@@ -2,3 +2,4 @@ fastapi
 pybloom3
 uvicorn
 azure-cognitiveservices-language-luis
+azure-cognitiveservices-search-newssearch
