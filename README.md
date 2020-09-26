@@ -1,6 +1,13 @@
 # JusticeBytes
 ShellHacks 2020 - A search engine for social justice
 
+Developed with ❤ by:
+* Anthony Hevia - Fullstack/DevOps
+* Komila Kebolo - ML/UX
+* Dylan Ocha - Backend
+* Adam Fernandes - Web Scraping
+
+
 
 ## Overview
 ![System Diagram](./justiceBytes.png)
