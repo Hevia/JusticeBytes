@@ -98,14 +98,14 @@ def scrapeWikipedia() -> dict:
    return scrapedInfo
 
 # Saves a python object to a pickle file
-def pickleObject(info: object) -> None:
-   pickleOut = open(PICKLE_FILENAME, "wb")
+def pickleObject(filename: str, info: object) -> None:
+   pickleOut = open(filename, "wb")
    pickle.dump(info, pickleOut)
    pickleOut.close()
 
 # Method Calls
 output = scrapeWikipedia()
-pickleObject(output)
+pickleObject(PICKLE_FILENAME, output)
 
 # Closes file before ending program
 fileObject.close()
