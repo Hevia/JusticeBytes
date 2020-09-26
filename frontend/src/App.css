@@ -7,7 +7,6 @@
   position: fixed;
   top: 40%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
@@ -28,6 +27,15 @@
   transform: translate(-50%, -50%);
 }
 
+.search-results-logo {
+  background: url("./blm-logo.svg") no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: 10%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
 .homepage-search-bar {
     display: flex;
     justify-content: center;
@@ -43,8 +51,22 @@
   box-shadow: #31112c;
 }
 
+.search-result-box {
+  width: 70%;
+  position: fixed;
+  top: 30%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
 .search-result-card {
   width: 50%;
+  margin-top: 10px;
+  border: none;
+}
+
+.search-result-button {
+  background-color: #31112c !important;
 }
 
 .App-logo {
