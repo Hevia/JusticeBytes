@@ -3,6 +3,7 @@
 # Scrapes Wikipedia based on a list of keywords and outputs a heatmap of frequencies to a pickle file
 
 from bs4 import BeautifulSoup
+from FileHelpers import pickleObject
 import pickle
 import requests
 
@@ -96,12 +97,6 @@ def scrapeWikipedia() -> dict:
             return scrapedInfo
    
    return scrapedInfo
-
-# Saves a python object to a pickle file
-def pickleObject(filename: str, info: object) -> None:
-   pickleOut = open(filename, "wb")
-   pickle.dump(info, pickleOut)
-   pickleOut.close()
 
 # Method Calls
 output = scrapeWikipedia()

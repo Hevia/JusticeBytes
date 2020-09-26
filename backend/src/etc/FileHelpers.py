@@ -39,6 +39,12 @@ def load_file_as_str(file_path: str) -> str:
     except Exception:
         raise Exception(f"Error reading file at: {file_path}")
 
+# Saves a python object to a pickle file
+def pickleObject(filename: str, info: object) -> None:
+   pickleOut = open(filename, "wb")
+   pickle.dump(info, pickleOut)
+   pickleOut.close()
+
 # Unpickles a file and returns the object
 def unpickle(filename: str) -> object:
    pickleIn = open(filename, "rb")
