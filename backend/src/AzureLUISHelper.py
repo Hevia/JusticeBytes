@@ -6,13 +6,12 @@ from typing import List
 from etc.FileHelpers import *
 
 
-class AzureHelper:
+class AzureLUISHelper:
     def __init__(self):
         self.credential_dict = loadJSON("./credentials/azure-keys.json")
-        self.runtimeCredentials = CognitiveServicesCredentials(self.credential_dict["predictionKey"])
         self.client = LUISRuntimeClient(
             endpoint=f'https://{self.credential_dict["predictionResourceName"]}.cognitiveservices.azure.com/',
-            credentials=self.runtimeCredentials
+            credentials=CognitiveServicesCredentials(self.credential_dict["predictionKey"])
         )
     
     # TODO: Not sure how the final method signature will look like but heres a start
@@ -26,5 +25,3 @@ class AzureHelper:
             "Development", 
             predictionRequest)
         print(predictionResponse)
-
-AzureHelper()
