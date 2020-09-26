@@ -22,18 +22,28 @@ class SearchHelper:
                 else:
                     self._filters[title].add(word)
     # Assumes a dictionary of keyword-frequency dictionaries is passed in to work with
-    def alt_search(self, search_data_cleaned  : dict, search_string: str) -> dict:
+    def alt_search(self, search_data_cleaned  : dict, search_string: str) -> str:
         ranked: dict = {}
+        # TODO: sanitizing query would improve runtime, but we won't get false negatives.
         search_terms = re.split("\W+", search_string)
 
+        # Adds frequency of the keywords contained both in the url and the search string. 
         for title, words in search_data_cleaned.items():
             rank = 0
             for word in words:
-                if word in search_terms :
+                if word in search_terms:
                     rank += words[word]
             ranked[title] = rank
 
-        return ranked
+        # Looks through ranking just made and returns URL w/ highest rank.
+        maxVal = 0
+        bestURL : str = ""
+        for title, ranking in ranked.items():
+            if ranking > maxVal:
+                maxVal = ranking
+                bestURL = title
+
+        return bestURL
 
     def search(self, search_string: str) -> List[str]:
         search_terms = re.split("\W+", search_string)
