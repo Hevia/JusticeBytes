@@ -1,4 +1,5 @@
 azure-cognitiveservices-language-luis
+BeautifulSoup4
 fastapi
 pybloom3
 requests
