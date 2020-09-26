@@ -10,7 +10,7 @@ const engine = new Styletron();
 const AppContext = React.createContext({});
 
 function App() {
-  const [searchResults, setSearchResults] = useState([{"url": "testing", "title": "none"}, {"url": "testing", "title": "none"}]);
+  const [searchResults, setSearchResults] = useState([{"url": "https://www.google.com/", "title": "Google"}, {"url": "https://www.google.com/", "title": "Google2"}]);
   const [resultsFound, setResultsFound] = useState(false);
   const store = {
     searchResults: {get: searchResults, set: setSearchResults},
