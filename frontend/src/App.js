@@ -5,12 +5,24 @@ import { Input, SIZE  } from "baseui/input";
 import {Button} from 'baseui/button';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {Client as Styletron} from 'styletron-engine-atomic';
+import axios from 'axios';
 
 const engine = new Styletron();
+
+
 
 function App() {
   const [value, setValue] = React.useState("What would you like to know?");
   const [_, theme] = useStyletron();
+
+   async function makeSearchRequest(user_input) {
+    const response = await axios.post(
+      'http://127.0.0.1:8000/testJSON',
+      { search_query: user_input },
+      { headers: { 'Content-Type': 'application/json' } }
+    )
+    console.log(response.data)
+  }
 
 
   return (
@@ -36,7 +48,7 @@ function App() {
         }}
       />
       <Button
-        onClick={() => console.log(value)}
+        onClick={async() => await makeSearchRequest(value)}
       >Search</Button>
       </div>
     </div>
