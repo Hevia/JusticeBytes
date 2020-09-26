@@ -34,7 +34,7 @@ def load_file_as_str(file_path: str) -> str:
     _file = ""
     try:
         with open(file_path, "r") as fp:
-            _file = fp.readlines()
+            _file = fp.read()
         return _file
     except Exception:
         raise Exception(f"Error reading file at: {file_path}")
