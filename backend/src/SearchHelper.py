@@ -43,7 +43,7 @@ class SearchHelper:
         return search_terms
 
     # Assumes a dictionary of keyword-frequency dictionaries is passed in to work with
-    def search(self, search_string: str) -> str:
+    def search(self, search_string: str) -> set:
         # TODO: sanitizing query would improve runtime, but we don't get false negatives right now.
         search_terms = self.spellCheck(search_string)
         result = []
@@ -59,7 +59,7 @@ class SearchHelper:
 
         pickle_in.close()
 
-        return result
+        return set(result)
 
     def alt_search(self, search_string: str) -> List[str]:
         search_terms = re.split("\W+", search_string)
