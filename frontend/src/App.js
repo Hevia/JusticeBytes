@@ -6,18 +6,11 @@ import {Button} from 'baseui/button';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {Client as Styletron} from 'styletron-engine-atomic';
 
-
-const THEME = {
-  light: 'light',
-  dark: 'dark',
-};
 const engine = new Styletron();
-
-
 
 function App() {
   const [value, setValue] = React.useState("What would you like to know?");
-  const [css, theme] = useStyletron();
+  const [_, theme] = useStyletron();
 
 
   return (
@@ -31,7 +24,7 @@ function App() {
         value={value}
         onChange={e => setValue(e.target.value)}
         size={SIZE.default}
-        placeholder="What would you like to know?"
+        placeholder=""
         clearOnEscape
         overrides={{
           Root: {
