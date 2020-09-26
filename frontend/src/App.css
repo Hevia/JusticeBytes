@@ -43,6 +43,10 @@
   box-shadow: #31112c;
 }
 
+.search-result-card {
+  width: 50%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
