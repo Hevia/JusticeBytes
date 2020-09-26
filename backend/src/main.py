@@ -1,5 +1,6 @@
 from typing import Optional
 from fastapi import FastAPI
+from pydantic import BaseModel
 from SearchHelper import SearchHelper
 from AzureHelper import AzureHelper
 
@@ -10,15 +11,23 @@ app = FastAPI()
 searchHelper = SearchHelper()
 azureHelper = AzureHelper()
 
+# init our data models
+class SearchData(BaseModel):
+    search_query: str
+
 # You can use this to test if the server is alive
 @app.get("/")
 def ping():
     return {"Hello": "World"}
 
+@app.get("/testJSON")
+def testJSON(searchData: SearchData):
+    print(searchData)
+    return searchData
 
 @app.get("/search")
-def search():
-    search_query = "" #TODO: Get this from the JSON body, this is place holder
+def search(searchData: SearchData):
+    search_query = searchData.search_query
     search_results = []
 
     # Using our handwritten search algorithim, well see if we can return any documents
