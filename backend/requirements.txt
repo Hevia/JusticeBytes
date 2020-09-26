@@ -1,4 +1,5 @@
+azure-cognitiveservices-language-luis
 fastapi
 pybloom3
+requests
 uvicorn
-azure-cognitiveservices-language-luis
