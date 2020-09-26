@@ -9,7 +9,22 @@ def loadJSON(data_path: str) -> dict:
     except Exception:
         raise Exception(f"Could not open file located at: {data_path}")
 
-def load_file_as_list(file_path: str) -> str:
+def load_file_as_list(file_path: str) -> list:
+    """
+    Loads the file at a specificed path, returns an error otherwise
+        
+    :param file_path (str): The path to the file you want to load
+    :return _file a file of the contents of the file
+    """
+    _file = ""
+    try:
+        with open(file_path, "r") as fp:
+            _file = fp.readlines()
+        return _file
+    except Exception:
+        raise Exception(f"Error reading file at: {file_path}")
+
+def load_file_as_str(file_path: str) -> str:
     """
     Loads the file at a specificed path, returns an error otherwise
         
