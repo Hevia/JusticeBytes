@@ -1,11 +1,8 @@
-from pybloom import BloomFilter
+from BingHelper import BingHelper
 import pickle
+from pybloom import BloomFilter
 import re
 import requests
-from etc.FileHelpers import *
-import json
-from BingHelper import BingHelper
-# from nltk.corpus import wordnet
 from typing import List
 
 class SearchHelper:
@@ -29,28 +26,24 @@ class SearchHelper:
                     self._filters[title].add(word)
                  
     def spellCheck(self, search_string: str) -> []:
-        
         response = (self.bingHelper.spellCheckerRequest(search_string)).json()
         search_terms = re.split("\W+", search_string)
         i = 0
 
+        # If all the words are spelled correctly in the query, just return the terms split on whitespace.
         if (len(response["flaggedTokens"]) == 0):
             return search_terms
         
-        #print(response)
-        
+        # Goes through and replaces misspelled words with their corrected spelling.
         for x in range(len(search_terms)):
             if (search_terms[x] == response["flaggedTokens"][i]["token"]):
                 search_terms[x] = response["flaggedTokens"][i]["suggestions"][0]["suggestion"]
                 i += 1
-
-        #print(search_terms)
         
         return search_terms
 
     # Assumes a dictionary of keyword-frequency dictionaries is passed in to work with
     def search(self, search_string: str) -> str:
-        
         # TODO: sanitizing query would improve runtime, but we don't get false negatives right now.
         search_terms = self.spellCheck(search_string)
         result = []
@@ -64,12 +57,9 @@ class SearchHelper:
                     for x in range(len(value)):
                         result.append(value[x])
 
-        #print(result)
         pickle_in.close()
 
         return result
-
-    
 
     def alt_search(self, search_string: str) -> List[str]:
         search_terms = re.split("\W+", search_string)
