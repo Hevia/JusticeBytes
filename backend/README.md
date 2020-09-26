@@ -1,6 +1,6 @@
 # JusticeBytes Backend
 
-## Instructions
+## Local Instructions
 * Clone the repo
 * Navigate to the backend directory
 * We reccommended you create a virtual environment. We use [pipenv](https://pypi.org/project/pipenv/)
@@ -24,6 +24,20 @@ You can test the API by hitting out testJSON endpoint. Here is some example dumm
     "search_query":"hello"
 }
 ```
-It should echo the data back to you
+It should echo the data back to you, if it does. Congrats! You are now ready for local development
 
 
+## Docker Instructions
+* Install Docker to your machine
+* Clone the repo
+* Navigate to the backend/ directory
+
+Build the docker image
+```
+docker build -t justice-backend .
+```
+
+Run the image
+```
+docker run -p 8000:8000 justice-backend
+```
