@@ -4,3 +4,4 @@ uvicorn
 azure-cognitiveservices-language-luis
 BeautifulSoup4
 requests
+azure-cognitiveservices-search-newssearch
