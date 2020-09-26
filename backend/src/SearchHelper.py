@@ -39,7 +39,6 @@ class SearchHelper:
         
         #print(response)
         
-        
         for x in range(len(search_terms)):
             if (search_terms[x] == response["flaggedTokens"][i]["token"]):
                 search_terms[x] = response["flaggedTokens"][i]["suggestions"][0]["suggestion"]
@@ -52,14 +51,12 @@ class SearchHelper:
     # Assumes a dictionary of keyword-frequency dictionaries is passed in to work with
     def search(self, search_string: str) -> str:
         
-        
         # TODO: sanitizing query would improve runtime, but we don't get false negatives right now.
         search_terms = self.spellCheck(search_string)
         result = []
         
         pickle_in = open("./etc/scraped-wikipedia-output.pickle", "rb")
         search_data_cleaned = pickle.load(pickle_in)
-        
         
         # Adds the url and title as a single element, we return the collection of them as an n x 2 array.
         for keyword, value in search_data_cleaned.items():
