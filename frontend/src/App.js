@@ -1,11 +1,8 @@
-import React, { useState, useContext }  from 'react';
+import React, { useState }  from 'react';
 import './App.css';
-import { BaseProvider, DarkTheme, LightTheme, useStyletron} from 'baseui';
-import { Input, SIZE  } from "baseui/input";
-import {Button} from 'baseui/button';
+import { BaseProvider, LightTheme} from 'baseui';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {Client as Styletron} from 'styletron-engine-atomic';
-import axios from 'axios';
 import SearchBar from './SearchBar';
 import SearchResults from './SearchResults';
 
@@ -13,7 +10,7 @@ const engine = new Styletron();
 const AppContext = React.createContext({});
 
 function App() {
-  const [searchResults, setSearchResults] = useState([{"url": "testing", "title": "none"}]);
+  const [searchResults, setSearchResults] = useState([{"url": "testing", "title": "none"}, {"url": "testing", "title": "none"}]);
   const [resultsFound, setResultsFound] = useState(false);
   const store = {
     searchResults: {get: searchResults, set: setSearchResults},

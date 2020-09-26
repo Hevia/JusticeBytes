@@ -1,8 +1,8 @@
 import React from 'react';
 
-function SearchResults() {
+function SearchResults(props) {
   return (
-  <div></div>
+  <div>{console.log(props.stateContext.resultsFound)}</div>
   );
 }
 

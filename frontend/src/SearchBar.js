@@ -18,8 +18,7 @@ function SearchBar(props) {
       { headers: { 'Content-Type': 'application/json' } }
     )
     console.log(response.data)
-    console.log(props.stateContext.resultsFound.set(true))
-    console.log(props.stateContext.resultsFound)
+    props.stateContext.resultsFound.set(true)
   }
 
 
