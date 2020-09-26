@@ -4,7 +4,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-TEST = True
+TEST = False
 
 # URL bases which will be the beginning of all URLS
 WIKI_URL_BASE: str = "https://en.wikipedia.org/wiki/"
@@ -45,11 +45,16 @@ def scrapeWikipedia():
       soup = BeautifulSoup(link.content, "html.parser")
       info = soup.select_one("div div p")
       print(info.text)
-
+      for sibling in info.next_siblings:
+         try:
+            print(sibling.get_text())
+         except:
+            break
+      print("********************************************************************************")
       # TESTING
       if TEST:
          test += 1
-         if (test > 3):
+         if (test > 2):
             break
 
 
