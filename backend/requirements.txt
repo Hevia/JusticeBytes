@@ -1,6 +1,7 @@
-azure-cognitiveservices-language-luis
-BeautifulSoup4
 fastapi
 pybloom3
-requests
 uvicorn
+azure-cognitiveservices-language-luis
+BeautifulSoup4
+requests
+azure-cognitiveservices-search-newssearch

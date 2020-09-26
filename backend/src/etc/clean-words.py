@@ -2,10 +2,12 @@
 # ShellHacks 2020
 # Quick and dirty script for cleaning previous data
 
-# Read file
-fileObject = open("keywords.txt", "r")
+from FileHelpers import load_file_as_list
 
-rawInput = fileObject.readlines()
+TARGET_FILE: str = "keywords.txt"
+
+# Read file
+rawInput = load_file_as_list(TARGET_FILE)
 noiceInput = []
 
 for item in rawInput:
@@ -13,13 +15,11 @@ for item in rawInput:
    newS = item.split(", ")
    noiceInput.append(newS)
 
-fileObject.close()
-
 # Writing back into file
-fileObject = open("keywords.txt", "w")
-
-for item in noiceInput:
-   for string in item:
-      fileObject.write(string + "\n")
-
-fileObject.close()
+try:
+   with open(TARGET_FILE, "w") as fileObject:
+      for item in noiceInput:
+         for string in item:
+            fileObject.write(string + "\n")
+except Exception:
+   raise Exception(f"Error writing to file at: {TARGET_FILE}")

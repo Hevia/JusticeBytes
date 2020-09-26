@@ -2,7 +2,8 @@ from typing import Optional
 from fastapi import Body, Request, FastAPI
 from pydantic import BaseModel
 from SearchHelper import SearchHelper
-from AzureHelper import AzureHelper
+from AzureLUISHelper import AzureLUISHelper
+from BingHelper import BingHelper
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -24,9 +25,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# init our helpers
+# init our helpers and data sources
 searchHelper = SearchHelper()
-azureHelper = AzureHelper()
+azureHelper = AzureLUISHelper()
+bingHelper = BingHelper()
 
 # init our data models
 class SearchData(BaseModel):
