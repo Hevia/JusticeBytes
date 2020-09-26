@@ -4,6 +4,8 @@
 from bs4 import BeautifulSoup
 import requests
 
+TEST = False
+
 # URL bases which will be the beginning of all URLS
 WIKI_URL_BASE: str = "https://en.wikipedia.org/wiki/"
 # Filename holding political keywords from https://myvocabulary.com/word-list/politicsvocabulary/
@@ -41,12 +43,19 @@ def scrapeWikipedia():
          continue
       
       soup = BeautifulSoup(link.content, "html.parser")
-      print(soup.get_text())
-
+      info = soup.select_one("div div p")
+      print(info.text)
+      for sibling in info.next_siblings:
+         try:
+            print(sibling.get_text())
+         except:
+            break
+      print("********************************************************************************")
       # TESTING
-      test += 1
-      if (test > 0):
-         break
+      if TEST:
+         test += 1
+         if (test > 2):
+            break
 
 
 scrapeWikipedia()
