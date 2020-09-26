@@ -1,15 +1,20 @@
 # Adam Fernandes
 # ShellHacks 2020
+# Scrapes Wikipedia based on a list of keywords and outputs a heatmap of frequencies to a pickle file
 
 from bs4 import BeautifulSoup
+import pickle
 import requests
 
-TEST = True
+# Toggle t/f for debugging purposes
+DEBUGGING = False
 
 # URL bases which will be the beginning of all URLS
 WIKI_URL_BASE: str = "https://en.wikipedia.org/wiki/"
 # Filename holding political keywords from https://myvocabulary.com/word-list/politicsvocabulary/
 KEYWORDS_FILENAME: str = "keywords.txt"
+# Filename of output pickle file
+PICKLE_FILENAME: str = "scraped-wikipedia-output.pickle"
 # Read from the keywords file
 fileObject = open(KEYWORDS_FILENAME, "r")
 
@@ -31,12 +36,13 @@ def isValidLink(link: requests.models.Response) -> bool:
    try:
       link.raise_for_status()
    except:
-      print("Error in %s." % (link))
+      if DEBUGGING:
+         print("Error in %s." % (link))
       return False
    return True
 
 # Goes ahead and increments values inside the heatmap
-def incrementFrequencies(info, heatmap: dict):
+def incrementFrequencies(info, heatmap: dict) -> None:
    for word in info.get_text().split(" "):
       word = word.rstrip(",").rstrip(".").strip("\"").lower()
       if word in heatmap:
@@ -60,7 +66,7 @@ def editHeatmap(info, heatmap: dict) -> dict:
 # Uses the keywords from the corpus to scrape Wikipedia
 # Returns a dictionary where key is URL and value is a heat map of other words in the dictionary
 def scrapeWikipedia() -> dict:
-   # TESTING
+   # DEBUGGING
    test: int = 0
 
    scrapedInfo: dict = {}
@@ -82,18 +88,24 @@ def scrapeWikipedia() -> dict:
       info = soup.select_one("div div p")
       heatmap: dict = editHeatmap(info, freqDict.copy())
 
-      print(heatmap)
-      
-      print("********************************************************************************")
-      
-      # TESTING
-      if TEST:
+      scrapedInfo[newUrl] = heatmap
+            
+      if DEBUGGING:
          test += 1
          if (test > 2):
-            break
+            return scrapedInfo
+   
+   return scrapedInfo
+
+# Saves a python object to a pickle file
+def pickleObject(info: object) -> None:
+   pickleOut = open(PICKLE_FILENAME, "wb")
+   pickle.dump(info, pickleOut)
+   pickleOut.close()
 
 # Method Calls
-scrapeWikipedia()
+output = scrapeWikipedia()
+pickleObject(output)
 
 # Closes file before ending program
 fileObject.close()
