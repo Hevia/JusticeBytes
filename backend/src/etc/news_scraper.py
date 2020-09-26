@@ -8,7 +8,7 @@ from newsapi import NewsApiClient
 from FileHelpers import load_file_as_list, pickleObject
 
 # Adam's KnightsMail API Key
-API_KEY: str = "7f92eb418b194d71a031534445d41d11"
+API_KEY: str = "37eee34b3156415680064022caa7c23b"
 # File holding keywords
 KEYWORDS_FILENAME: str = "keywords.txt"
 # Output file
