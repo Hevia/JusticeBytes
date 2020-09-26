@@ -1,11 +1,28 @@
 from typing import Optional
-from fastapi import FastAPI
+from fastapi import Body, Request, FastAPI
 from pydantic import BaseModel
 from SearchHelper import SearchHelper
 from AzureHelper import AzureHelper
+from fastapi.middleware.cors import CORSMiddleware
+
 
 # init our API
 app = FastAPI()
+
+# add our app middleware
+origins = [
+    "http://localhost:3000",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # init our helpers
 searchHelper = SearchHelper()
@@ -20,12 +37,18 @@ class SearchData(BaseModel):
 def ping():
     return {"Hello": "World"}
 
-@app.get("/testJSON")
+@app.post("/request")
+async def testRequest(req: Request):
+    print(await req.body())
+    return {"Hello": "World"}
+
+# Use this method to debug if the server is accepting JSON
+@app.post("/testJSON")
 def testJSON(searchData: SearchData):
     print(searchData)
     return searchData
 
-@app.get("/search")
+@app.post("/search")
 def search(searchData: SearchData):
     search_query = searchData.search_query
     search_results = []
