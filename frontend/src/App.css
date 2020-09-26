@@ -11,6 +11,23 @@
   transform: translate(-50%, -50%);
 }
 
+.homepage-search-container {
+  background-color: #31112c;
+}
+
+.search-button {
+  background-color: #31112c !important;
+}
+
+.homepage-logo {
+  background: url("./blm-logo.svg") no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: 25%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
 .homepage-search-bar {
     display: flex;
     justify-content: center;
@@ -23,6 +40,7 @@
 
 .search-bar {
   display: flex;
+  box-shadow: #31112c;
 }
 
 .App-logo {
