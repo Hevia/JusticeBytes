@@ -1,4 +1,6 @@
-# Quick script for cleaning previous data
+# Adam Fernandes
+# ShellHacks 2020
+# Quick and dirty script for cleaning previous data
 
 # Read file
 fileObject = open("keywords.txt", "r")
