@@ -1,9 +1,12 @@
 from typing import Optional
 from fastapi import FastAPI
-import SearchHelper
+from SearchHelper import SearchHelper
+from AzureHelper import AzureHelper
 
-
+# init our API
 app = FastAPI()
+
+# init our helpers
 searchHelper = SearchHelper()
 azureHelper = AzureHelper()
 

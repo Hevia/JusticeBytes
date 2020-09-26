@@ -13,4 +13,4 @@ class AzureHelper:
     
     # TODO: Not sure how the final method signature will look like but heres a start
     def searchLUIS(self, search_query: str) -> List[str]:
-        pass
+        return []
