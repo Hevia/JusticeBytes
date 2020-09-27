@@ -6,7 +6,7 @@ import { Button } from "baseui/button";
 import axios from "axios";
 
 function SearchBar(props) {
-  const [value, setValue] = React.useState("What would you like to know?");
+  const [value, setValue] = React.useState("");
   const [_, theme] = useStyletron();
 
   async function makeSearchRequest(user_input) {
@@ -30,7 +30,7 @@ function SearchBar(props) {
             value={value}
             onChange={(e) => setValue(e.target.value)}
             size={SIZE.default}
-            placeholder=""
+            placeholder="What would you like to know?"
             clearOnEscape
             overrides={{
               Root: {
