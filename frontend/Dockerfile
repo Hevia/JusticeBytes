@@ -1,13 +1,19 @@
 FROM node:12
 
-COPY package*.json ./
 
+WORKDIR /usr/src/app
+RUN mkdir /usr/src/app/node_modules
+RUN mkdir /usr/src/app/src/
+COPY . .
+COPY ./src/ .
+COPY package*.json ./
 RUN npm install
 
-COPY . .
-
-ENV PORT=3000
 
 EXPOSE 3000
 
-CMD  ["npm run start"]
+RUN ls
+RUN ls/src/
+RUN ls/node_modules/
+
+CMD  ["npm",  "start"]
