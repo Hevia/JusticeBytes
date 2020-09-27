@@ -3,9 +3,9 @@
 # Scrapes Wikipedia based on a list of keywords and outputs a heatmap of frequencies to a pickle file
 
 from bs4 import BeautifulSoup
-from FileHelpers import pickleObject
 import pickle
 import requests
+from FileHelpers import pickleObject
 
 # Toggle t/f for debugging purposes
 DEBUGGING = False
