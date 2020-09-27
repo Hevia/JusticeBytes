@@ -24,4 +24,4 @@ class AzureLUISHelper:
             self.credential_dict["appId"], 
             "Development", 
             predictionRequest)
-        print(predictionResponse)
+        return predictionResponse.prediction.top_intent
