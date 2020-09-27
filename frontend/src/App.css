@@ -3,7 +3,7 @@
 }
 
 .gitHub-link {
-  left: 45%;
+  left: 47%;
   right: 45%;
   right: auto;
   text-align: center;
@@ -45,7 +45,8 @@
   background-size: contain;
   position: fixed;
   top: 10%;
-  left: 53%;
+  left: 57%;
+  right: 50%;
   transform: translate(-50%, -50%);
 }
 
