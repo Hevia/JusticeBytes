@@ -1,19 +1,13 @@
 FROM node:12
 
-
-WORKDIR /usr/src/app
-RUN mkdir /usr/src/app/node_modules
-RUN mkdir /usr/src/app/src/
-COPY . .
-COPY ./src/ .
+WORKDIR /app
 COPY package*.json ./
-RUN npm install
 
+RUN npm install
+RUN npm install react-scripts@3.4.1 -g --silent
+
+COPY . .
 
 EXPOSE 3000
 
-RUN ls
-RUN ls/src/
-RUN ls/node_modules/
-
-CMD  ["npm",  "start"]
+CMD [ "npm", "start" ]

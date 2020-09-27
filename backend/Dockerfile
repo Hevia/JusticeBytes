@@ -1,10 +1,11 @@
-FROM python:3.8-slim-buster
+FROM python:3.7
 
-COPY . .
-
+COPY requirements.txt .
 RUN pip install -r requirements.txt
-RUN cd src/
 
-ENV PORT=8000
 EXPOSE 8000
-CMD ["uvicorn main:app --reload"]
+COPY . .
+COPY ./src .
+RUN ls
+
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
