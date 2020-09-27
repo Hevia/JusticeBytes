@@ -28,4 +28,6 @@ Here is a non-ranked, non-exhaustive list of all the resources we used to bring 
 * https://medium.com/@chathuranga94/managing-global-state-with-reacts-hooks-context-api-9b9f781d8a3f
 * https://vegibit.com/rendering-a-list-with-react/
 * https://reactjs.org/docs/components-and-props.html
+* https://mherman.org/blog/dockerizing-a-react-app/
+* https://fireship.io/lessons/docker-basics-tutorial-nodejs/
 
