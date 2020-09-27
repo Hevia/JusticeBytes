@@ -45,9 +45,57 @@
   background-size: contain;
   position: fixed;
   top: 10%;
-  left: 57%;
+  left: 55%;
   right: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 945px) {
+  .search-results-logo {
+    background: url("./blm-logo.svg") no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 10%;
+    left: 61%;
+    right: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .search-results-logo {
+    background: url("./blm-logo.svg") no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 10%;
+    left: 66%;
+    right: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .search-results-logo {
+    background: url("./blm-logo.svg") no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 10%;
+    left: 68%;
+    right: 45%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .search-results-logo {
+    background: url("./blm-logo.svg") no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 10%;
+    left: 70%;
+    right: 45%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .homepage-search-bar {
