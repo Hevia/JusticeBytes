@@ -5,7 +5,7 @@ Developed with ❤ by:
 * Anthony Hevia - Fullstack/DevOps
 * Komila Kebolo - ML/UX
 * Dylan Ocha - Backend
-* Adam Fernandes - Web Scraping / Backend
+* Adam Fernandes - Web Scraping / Backend, Frontend styling
 
 
 
