@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.gitHub-logo {
+  left: 45%;
+  right: 45%;
+  right: auto;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5%;
+  color: mediumslateblue;
+  font: x-small;
+  font-family: monospace;
+}
+
 .homepage-body {
   width: 70%;
   position: fixed;
