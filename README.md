@@ -26,3 +26,4 @@ Here is a non-ranked, non-exhaustive list of all the resources we used to bring 
 * https://myvocabulary.com/word-list/politicsvocabulary/
 * https://microsoft.github.io/frontend-bootcamp/
 * https://medium.com/@chathuranga94/managing-global-state-with-reacts-hooks-context-api-9b9f781d8a3f
+* https://github.com/mattlisiv/newsapi-python
