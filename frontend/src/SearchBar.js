@@ -26,7 +26,7 @@ function SearchBar(props) {
     Promise.resolve(response).then(() => {
       console.log("Promise completed....")
       console.log(response.data)
-      props.stateContext.searchResults.set(response.data.search_query);
+      props.stateContext.searchResults.set(response.data.search_results);
       props.stateContext.resultsFound.set(true);
     });
   }
