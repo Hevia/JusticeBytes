@@ -9,6 +9,13 @@ function SearchBar(props) {
   const [value, setValue] = React.useState("");
   const [_, theme] = useStyletron();
 
+  const handleKeyPress = (event) => {
+    if (value !== "" && event.key === "Enter") {
+      event.preventDefault();
+      makeSearchRequest(value);
+    }
+  };
+
   async function makeSearchRequest(user_input) {
     const response = await axios.post(
       "http://127.0.0.1:8000/testJSON",
@@ -32,6 +39,7 @@ function SearchBar(props) {
             size={SIZE.default}
             placeholder="What would you like to know?"
             clearOnEscape
+            onKeyDown={handleKeyPress}
             overrides={{
               Root: {
                 style: {
