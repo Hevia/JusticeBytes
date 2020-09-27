@@ -1,48 +1,22 @@
-Absentee_ballot
+Absentee
 Accountable
 Activist
-Adverse
-Advertising
-Advice
-Advise
+Affordable Care Act
 
-Affiliation
-Aggressive
 Amendment
-Announcement
-Anthem
-Appeal
-Appearance
 Appoint
 Approach
 Appropriation
-Arguments
-Articulate
-Aspiration
+Argumentsß
 Asset
-Assimilation
-At large
-Audience
-Authorization
+Assimilationß
 
 Background
 Bait
-Balanced budget
 Ballot
-Ballot box
-Bandwagon
-Barnstorm
-Behavior
-Beliefs
-Biannual
-Bias
-Bicameral
 Bill
-Bipartisan
-Boondoggle
-Brochure
-Budget
-Bunk
+Bipartisanß
+Budgetß
 Bureaucracy
 
 Cabinet
@@ -51,54 +25,32 @@ Candidate
 Canvass
 Capitalize
 Career
-Catalyst
 Caucus
 Ceiling
 Centrist
-Challenge
 Challenger
 Changes
-Charismatic
 Checks and balances
-Choice
-Citation
-Civic
-Coalition
-Coast-to-coast
-Coattail
-Collaboration
-Colleague
-Collective
-Commitments
+CoalitionCoattail
 Committee
 Commonality
 Communication
 Compassion
 Concede
-Concessions
-Confidence
 Congress
 Congressional
 Conscience
-Consequence
 Conservative
-Constituent
 Constitution
-Consultation
 Contribution
-Controversy
-Convene
 Convention
 Council
-Curiosity
-Cycle
 
 Dark horse
 Debate
 Decision
 Decisive
 Declaration
-Defeat
 Deficit
 Delegate
 Deliberate
@@ -106,78 +58,39 @@ Deliberation
 Democracy
 Democrat
 Democratic
-Derision
-Destiny
-Diligent
 Diplomat
 Disapproval
 Discourse
 Discreet
-Discussion
-Disheartened
 Dishonesty
-Dissatisfaction
 District
-Distrust
 Diverse
 Division
-Dogma
 Dominate
 Donald Trump
 Donation
 Donor
-Dossier
-Dynamic
 
-Effective
-Efficient
 Elation
 Electoral college
 Elevate
-Eloquence
-Emphasis
 Enact
 Endorsement
-Engaging
-Equal
-Ethics
-Euphoria
-Excessive
 Executive
 Exit poll
-Experience
 
-Faction
 Federal
-Feud
 Filibuster
-Flawed
-Focus
-Forum
-Fraud
 Freedom
 Front runner
-Fundamental
-Funding
-Fundraiser
 
-Gambit
 Gerrymander
-Glaring
 GOP
 Government
 Governance
-Grass roots
-Grateful
+Grassroots
 
 Handshakes
-Hard money
-Hatch Act
-Heckle
-Historic
-Honesty
-Hooray
-Hypocrisy
 
 Immigrants
 Impound
@@ -189,43 +102,25 @@ Incumbent
 Independent
 Independent
 Indulge
-Infallible
+Infallib
 Influx
 Informative
 Initiative
-Innuendo
 Inspiring
-Integrity
-Interests
 Investigate
-Involvement
-Irresponsible
-Issues
 
-Jeopardy
 Joe Biden
 Judge
 Judicial
 
-Keen
-Knowledge
 
 Lame duck
 Landslide
 Law
-Leader
-Leadership
-Leanings
-Legal
 Legalization
 Legislature
 Liberal
-Listening
 Lobbyist
-Lone
-Loser
-Loss
-Loyalty
 
 Magistrate
 Majority
@@ -264,9 +159,6 @@ Orator(y)
 Outspoken
 Ovation
 
-PAC (political action committee)
-Pamphlets
-Pardon
 Participation
 Partisanship
 Party
@@ -276,41 +168,20 @@ Platform
 Pledge
 Plurality
 Polarize
-Policy
 Polite
-Politician
 Politics
-Poll
-Polling place
-Pollster
+PollPollster
 Popular
 Popularity
 Pork barrel
 Position paper
-Pragmatist
-Praise
+
 Precinct
-Predictions
-Prescient
 Press
-Pride
 Primary
 Priority
-Proactive
-Process
 Progressive
-Projection
-Promises
 Propaganda
-Proponent
-Proposal
-Purpose
-
-Query
-Quest
-Questions
-Quorum
-Quotes
 
 Race
 Ratify
@@ -318,7 +189,6 @@ Re-election
 Reapportionment
 Recall
 Recognition
-Reconciliation
 Recount
 Recrimination
 Redistrict
@@ -327,8 +197,6 @@ Reform
 Registration
 Regulate
 Representation
-Republican
-Rescind
 Resignation
 Resilience
 Restrictions
@@ -337,144 +205,31 @@ Reveal
 Revelations
 Revenues
 Rhetoric
-Roll call
 Runoff
 
-Scope
 Senate
-Seniority
-Shift
-Shortcoming
-Shuffle
-Sidelines
-Sinecure
-Skill
-Slate
-Slogan
-Solicitation
-Solution
-Spar
-Spectacle
-Speculate
-Spending
-Spin
-Stakes
-Stance
 States rights
 Statute
-Strategist
 Strategy
 Straw poll
 Stump
 Subcommittee
-Subjects
-Success
 Suffrage
-Support
-System
 
-Tactics
-Tally
-Taxpayer
-Term
-Term limit
-Ticket
-Topic
+TaxpayerTicket
 Trust
 Turnout
 
-Ultimate
 Unanimous
-Uncommitted
-Unfair
 Uniformity
-Unity
-Unknown
 Unopposed
 Unprecedented
-Unwind
 Upcoming
-Upset
 
 Vacancy
 Veto
 Viable
-Victor
-Victory
-Vie
 Viewpoint
-Views
-Violations
-VIP
-Volunteers
 Voter
-Vulnerability
-
-Ward
-Whistle-stop
-Wild-card
-Win
-Winner
-Withdraw
-Withhold
-Woo
 
 Xenophobic
-
-Yell
-Yield
-
-Zeal
-Zealous
-Zone
-
-Alabama
-Alaska
-Arizona
-Arkansas
-California
-Colorado
-Connecticut
-Delaware
-Florida
-Georgia
-Hawaii
-Idaho
-Illinois
-Indiana
-Iowa
-Kansas
-Kentucky
-Louisiana
-Maine
-Maryland
-Massachusetts
-Michigan
-Minnesota
-Mississippi
-Missouri
-Montana
-Nebraska
-Nevada
-New Hampshire
-New Jersey
-New Mexico
-New York
-North Carolina
-North Dakota
-Ohio
-Oklahoma
-Oregon
-Pennsylvania
-Rhode Island
-South Carolina
-South Dakota
-Tennessee
-Texas
-Utah
-Vermont
-Virginia
-Washington
-West Virginia
-Wisconsin
-Wyoming
