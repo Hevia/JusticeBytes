@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.gitHub-link {
+  left: 47%;
+  right: 45%;
+  right: auto;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5%;
+  color: mediumslateblue;
+  font: x-small;
+  font-family: monospace;
+}
+
 .homepage-body {
   width: 70%;
   position: fixed;
@@ -32,7 +45,8 @@
   background-size: contain;
   position: fixed;
   top: 10%;
-  left: 53%;
+  left: 57%;
+  right: 50%;
   transform: translate(-50%, -50%);
 }
 

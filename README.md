@@ -5,7 +5,7 @@ Developed with ❤ by:
 * Anthony Hevia - Fullstack/DevOps
 * Komila Kebolo - ML/UX
 * Dylan Ocha - Backend
-* Adam Fernandes - Web Scraping / Backend
+* Adam Fernandes - Web Scraping / Backend, Frontend styling
 
 
 
@@ -26,6 +26,7 @@ Here is a non-ranked, non-exhaustive list of all the resources we used to bring 
 * https://myvocabulary.com/word-list/politicsvocabulary/
 * https://microsoft.github.io/frontend-bootcamp/
 * https://medium.com/@chathuranga94/managing-global-state-with-reacts-hooks-context-api-9b9f781d8a3f
+* https://github.com/mattlisiv/newsapi-python
 * https://vegibit.com/rendering-a-list-with-react/
 * https://reactjs.org/docs/components-and-props.html
 * https://mherman.org/blog/dockerizing-a-react-app/
