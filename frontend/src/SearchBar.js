@@ -8,7 +8,8 @@ import axios from "axios";
 function SearchBar(props) {
   const [value, setValue] = React.useState("");
   // eslint-disable-next-line
-  const [_, theme] = useStyletron();
+  const [css, theme] = useStyletron();
+  console.log(css);
 
   const handleKeyPress = (event) => {
     if (value !== "" && event.key === "Enter") {
