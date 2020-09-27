@@ -1,6 +1,7 @@
 node_modules/
 __pycache__/
 azure-keys.json
+.vscode/
 
 # dependencies
 /node_modules

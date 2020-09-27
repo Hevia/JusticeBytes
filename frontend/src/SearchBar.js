@@ -7,7 +7,6 @@ import axios from "axios";
 
 function SearchBar(props) {
   const [value, setValue] = React.useState("");
-  // eslint-disable-next-line
   const [css, theme] = useStyletron();
   console.log(css);
 

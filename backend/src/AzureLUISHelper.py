@@ -13,7 +13,7 @@ class AzureLUISHelper:
             endpoint=f'https://{self.credential_dict["predictionResourceName"]}.cognitiveservices.azure.com/',
             credentials=CognitiveServicesCredentials(self.credential_dict["predictionKey"])
         )
-    
+
     # TODO: Not sure how the final method signature will look like but heres a start
     def searchLUIS(self, search_query: str) -> List[str]:
         return []
@@ -24,4 +24,4 @@ class AzureLUISHelper:
             self.credential_dict["appId"], 
             "Development", 
             predictionRequest)
-        print(predictionResponse)
+        return predictionResponse.prediction.top_intent
