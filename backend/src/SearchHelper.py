@@ -59,7 +59,7 @@ class SearchHelper:
 
         pickle_in.close()
 
-        return set(result)
+        return list(set(map(tuple, result)))
 
     def alt_search(self, search_string: str) -> List[str]:
         search_terms = re.split("\W+", search_string)
