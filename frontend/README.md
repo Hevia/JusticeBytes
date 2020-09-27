@@ -11,12 +11,12 @@ It is reccommended you follow local instructions if doing development and Docker
 
 Build the docker image
 ```
-docker build -t justice-frontend .
+docker build -t justicebytes-frontend .
 ```
 
 Run the image
 ```
-docker run -p 3000:3000 justice-frontend
+docker run -it --rm -p 3000:3000 justicebytes-frontend
 ```
 
 ## Create React App boilerplate
