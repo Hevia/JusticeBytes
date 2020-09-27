@@ -34,10 +34,10 @@ It should echo the data back to you, if it does. Congrats! You are now ready for
 
 Build the docker image
 ```
-docker build -t justice-backend .
+docker build -t justicebytes-backend .
 ```
 
 Run the image
 ```
-docker run -p 8000:8000 justice-backend
+docker run -p 8000:8000 justicebytes-backend
 ```

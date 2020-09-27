@@ -29,4 +29,6 @@ Here is a non-ranked, non-exhaustive list of all the resources we used to bring 
 * https://github.com/mattlisiv/newsapi-python
 * https://vegibit.com/rendering-a-list-with-react/
 * https://reactjs.org/docs/components-and-props.html
+* https://mherman.org/blog/dockerizing-a-react-app/
+* https://fireship.io/lessons/docker-basics-tutorial-nodejs/
 
