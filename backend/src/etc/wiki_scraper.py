@@ -3,9 +3,9 @@
 # Scrapes Wikipedia based on a list of keywords and outputs a heatmap of frequencies to a pickle file
 
 from bs4 import BeautifulSoup
-from FileHelpers import pickleObject
 import pickle
 import requests
+from FileHelpers import pickleObject
 
 # Toggle t/f for debugging purposes
 DEBUGGING = False
@@ -19,8 +19,11 @@ PICKLE_FILENAME: str = "scraped-wikipedia-output.pickle"
 # Read from the keywords file
 fileObject = open(KEYWORDS_FILENAME, "r")
 
-# Returns a dictionary where keys are keywords and values are frequencies (initialized to 0)
 def createFrequencyKeywordsDict() -> dict:   
+   """
+   Returns a dictionary where keys are keywords and values are frequencies (initialized to 0)
+   """
+   
    freqDict: dict = {}
    
    for line in fileObject:
@@ -32,8 +35,11 @@ def createFrequencyKeywordsDict() -> dict:
    fileObject.seek(0)
    return freqDict
 
-# Returns true if a link is a valid webpage, false otherwise
 def isValidLink(link: requests.models.Response) -> bool:
+   """
+   Returns true if a link is a valid webpage, false otherwise
+   """
+
    try:
       link.raise_for_status()
    except:
@@ -42,16 +48,22 @@ def isValidLink(link: requests.models.Response) -> bool:
       return False
    return True
 
-# Goes ahead and increments values inside the heatmap
 def incrementFrequencies(info, heatmap: dict) -> None:
+   """
+   Goes ahead and increments values inside the heatmap
+   """
+
    for word in info.get_text().split(" "):
       word = word.rstrip(",").rstrip(".").strip("\"").lower()
       if word in heatmap:
          heatmap[word] += 1
 
-# Edits heatmap based on the tag element's contents
-# In other words, increments values in heatmap if a word is found within tag element or its siblings
 def editHeatmap(info, heatmap: dict) -> dict:
+   """
+   Edits heatmap based on the tag element's contents
+   In other words, increments values in heatmap if a word is found within tag element or its siblings
+   """
+   
    # Once for Tag object itself
    incrementFrequencies(info, heatmap)
    
@@ -64,9 +76,12 @@ def editHeatmap(info, heatmap: dict) -> dict:
    
    return heatmap
 
-# Uses the keywords from the corpus to scrape Wikipedia
-# Returns a dictionary where key is URL and value is a heat map of other words in the dictionary
 def scrapeWikipedia() -> dict:
+   """
+   Uses the keywords from the corpus to scrape Wikipedia.
+   Returns a dictionary where key is URL and value is a heat map of other words in the dictionary
+   """
+   
    # DEBUGGING
    test: int = 0
 
