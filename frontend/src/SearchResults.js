@@ -2,7 +2,6 @@ import * as React from "react";
 import './App.css';
 import {
   Card,
-  StyledBody,
   StyledAction
 } from "baseui/card";
 import { Button } from "baseui/button";

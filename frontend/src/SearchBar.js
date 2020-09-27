@@ -7,6 +7,7 @@ import axios from "axios";
 
 function SearchBar(props) {
   const [value, setValue] = React.useState("");
+  // eslint-disable-next-line
   const [_, theme] = useStyletron();
 
   const handleKeyPress = (event) => {
@@ -18,11 +19,12 @@ function SearchBar(props) {
 
   async function makeSearchRequest(user_input) {
     const response = await axios.post(
-      "http://127.0.0.1:8000/testJSON",
+      "https://justicebytes-backend.azurewebsites.net/search",
       { search_query: user_input },
       { headers: { "Content-Type": "application/json" } }
     );
-    console.log(response.data);
+    console.log(response.data)
+    props.stateContext.searchResults.set(response.data.search_query);
     props.stateContext.resultsFound.set(true);
   }
 
