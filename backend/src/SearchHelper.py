@@ -12,6 +12,7 @@ class SearchHelper:
         self._stop_words = stop_words,
         self._buffer = buffer
         self.bingHelper = BingHelper()
+        self.bingNewsResultsNumber = 10
 
     def add_search_data(self, search_data_cleaned: dict) -> None:
         # Takes the title and list of words from the map.
@@ -48,17 +49,23 @@ class SearchHelper:
         search_terms = self.spellCheck(search_string)
         result = []
         
-        pickle_in = open("./etc/scraped-wikipedia-output.pickle", "rb")
+        pickle_in = open("./etc/scraped-news.pickle", "rb")
         search_data_cleaned = pickle.load(pickle_in)
-        
+
         # Adds the url and title as a single element, we return the collection of them as an n x 2 array.
         for keyword, value in search_data_cleaned.items():
                 if (keyword in search_terms):
                     for x in range(len(value)):
                         result.append(value[x])
 
+        response = self.bingHelper.newsRequest(search_string, self.bingNewsResultsNumber)
+        
+        # Appends the name and URL from the Bing news articles to the results.
+        for x in response.value:
+            result.append([x.url, x.name])
+        
         pickle_in.close()
-
+        
         return list(set(map(tuple, result)))
 
     def alt_search(self, search_string: str) -> List[str]:
