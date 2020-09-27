@@ -18,11 +18,12 @@ function SearchBar(props) {
 
   async function makeSearchRequest(user_input) {
     const response = await axios.post(
-      "http://127.0.0.1:8000/testJSON",
+      "http://127.0.0.1:8000/search",
       { search_query: user_input },
       { headers: { "Content-Type": "application/json" } }
     );
-    console.log(response.data);
+    console.log(response.data)
+    props.stateContext.searchResults.set(response.data.search_results);
     props.stateContext.resultsFound.set(true);
   }
 

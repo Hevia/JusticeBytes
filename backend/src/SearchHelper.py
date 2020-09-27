@@ -30,7 +30,7 @@ class SearchHelper:
         response = (self.bingHelper.spellCheckerRequest(search_string)).json()
         search_terms = re.split("\W+", search_string)
         i = 0
-
+        
         # If all the words are spelled correctly in the query, just return the terms split on whitespace.
         if (len(response["flaggedTokens"]) == 0):
             return search_terms
@@ -43,12 +43,23 @@ class SearchHelper:
         
         return search_terms
 
+    # Creates an array of dicts from a list of tuples
+    def Convert(self, tup, di) -> dict:
+        array = [] 
+        for a, b in tup:
+            di = {}
+            di["url"] = a
+            di["title"] = b 
+            array.append(di) 
+        return array
+
     # Assumes a dictionary of keyword-frequency dictionaries is passed in to work with
-    def search(self, search_string: str) -> set:
+    def search(self, search_string: str) -> dict:
         # TODO: sanitizing query would improve runtime, but we don't get false negatives right now.
         search_terms = self.spellCheck(search_string)
         result = []
-        
+        dictionary = {}
+
         pickle_in = open("./etc/scraped-news.pickle", "rb")
         search_data_cleaned = pickle.load(pickle_in)
 
@@ -65,11 +76,12 @@ class SearchHelper:
             result.append([x.url, x.name])
         
         pickle_in.close()
-        
-        return list(set(map(tuple, result)))
+
+        return self.Convert(list(set(map(tuple, result))), dictionary)
 
     def alt_search(self, search_string: str) -> List[str]:
         search_terms = re.split("\W+", search_string)
+        
         # Returns the name if all terms in the filter are also contained in the search terms.
         return [name for name, _filter in self._filters.items() if all(term in _filter for term in search_terms)]
 
