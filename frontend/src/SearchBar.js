@@ -23,9 +23,11 @@ function SearchBar(props) {
       { search_query: user_input },
       { headers: { "Content-Type": "application/json" } }
     );
-    console.log(response.data)
-    props.stateContext.searchResults.set(response.data.search_query);
-    props.stateContext.resultsFound.set(true);
+    Promise.all(response).then(() => {
+      console.log(response.data)
+      props.stateContext.searchResults.set(response.data.search_query);
+      props.stateContext.resultsFound.set(true);
+    });
   }
 
   return (
