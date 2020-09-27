@@ -4,7 +4,7 @@ import "./App.css";
 const Footer = ({ url }) => {
   return (
     <div>
-      <a href={url} className="gitHub-logo">
+      <a href={url} className="gitHub-link">
         <p>
           <em>GitHub</em>
         </p>
