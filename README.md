@@ -1,6 +1,6 @@
 # JusticeBytes
-ShellHacks 2020 - A search engine for social justice
-[Devpost Submission](https://devpost.com/software/justicebytes)
+- ShellHacks 2020 - *A search engine for social justice*
+- [Devpost Submission](https://devpost.com/software/justicebytes)
 
 Developed with ❤ by:
 * Anthony Hevia - Fullstack/DevOps
